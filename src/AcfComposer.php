@@ -6,10 +6,11 @@ use ReflectionClass;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Themosis\Core\Application;
+use Themosis\Hook\Hookable;
 use Themosis\Support\Facades\Action;
 use Symfony\Component\Finder\Finder;
 
-class AcfComposer
+class AcfComposer extends Hookable
 {
     /**
      * The application instance.
@@ -61,11 +62,9 @@ class AcfComposer
     {
         $this->app = $app;
 
-        if (! $this->app->runningInConsole()) {
-            Action::add('acf/init', function () {
-                $this->registerPath($this->app->path());
-            });
-        }
+        Action::add('acf/init', function () {
+            $this->registerPath($this->app->path());
+        });
     }
 
     /**

@@ -14,9 +14,7 @@ class AcfComposerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('AcfComposer', function () {
-            return new AcfComposer($this->app);
-        });
+        
     }
 
     /**
@@ -39,6 +37,11 @@ class AcfComposerServiceProvider extends ServiceProvider
             \Log1x\AcfComposer\Console\StubPublishCommand::class,
         ]);
 
-        $this->app->make('AcfComposer');
+        config([
+            'app.hooks' => [
+                ...config('app.hooks', []),
+                \Log1x\AcfComposer\AcfComposer::class,
+            ]
+        ]);
     }
 }

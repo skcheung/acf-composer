@@ -3,12 +3,19 @@
 namespace Log1x\AcfComposer\Console;
 
 use Exception;
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Illuminate\Console\GeneratorCommand;
+use Themosis\Core\Application;
 
 class MakeCommand extends GeneratorCommand
 {
+    /**
+     * @var \Themosis\Core\Application
+     */
+    protected $app;
+
     /**
      * The view stub used when generated.
      *
@@ -22,6 +29,13 @@ class MakeCommand extends GeneratorCommand
      * @var string
      */
     protected $path;
+
+    public function __construct(Filesystem $files, Application $app)
+    {
+        parent::__construct($files);
+
+        $this->app = $app;
+    }
 
     /**
      * Execute the console command.
