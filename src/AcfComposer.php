@@ -61,9 +61,11 @@ class AcfComposer
     {
         $this->app = $app;
 
-        Action::add('acf/init', function () {
-            $this->registerPath($this->app->path());
-        });
+        if (! $this->app->runningInConsole()) {
+            Action::add('acf/init', function () {
+                $this->registerPath($this->app->path());
+            });
+        }
     }
 
     /**

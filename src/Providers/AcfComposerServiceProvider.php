@@ -14,10 +14,8 @@ class AcfComposerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        if (!$this->app->runningInConsole()) {
-            $this->app->singleton('AcfComposer', function () {
-                return new AcfComposer($this->app);
-            });
+        $this->app->singleton('AcfComposer', function () {
+            return new AcfComposer($this->app);
         }
     }
 
