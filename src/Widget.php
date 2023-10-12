@@ -7,6 +7,7 @@ use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
 use Log1x\AcfComposer\Contracts\Widget as WidgetContract;
 use Log1x\AcfComposer\Concerns\InteractsWithBlade;
+use Themosis\Support\Facades\Filter;
 
 abstract class Widget extends Composer implements WidgetContract
 {
@@ -78,7 +79,7 @@ abstract class Widget extends Composer implements WidgetContract
             })->pop();
         });
 
-        add_filter('widgets_init', function () {
+        Filter::add('widgets_init', function () {
             register_widget($this->widget());
         }, 20);
 

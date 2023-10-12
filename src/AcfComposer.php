@@ -6,6 +6,7 @@ use ReflectionClass;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Themosis\Core\Application;
+use Themosis\Support\Facades\Action;
 use Symfony\Component\Finder\Finder;
 
 class AcfComposer
@@ -60,7 +61,7 @@ class AcfComposer
     {
         $this->app = $app;
 
-        add_action('acf/init', function () {
+        Action::add('acf/init', function () {
             $this->registerPath($this->app->path());
         });
     }
