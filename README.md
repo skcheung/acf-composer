@@ -1,5 +1,10 @@
 # ACF Composer
 
+> Note
+> This is a package adapted for Themosis use.
+>
+> Replace any `wp acorn` command with `php artisan`
+
 ![Latest Stable Version](https://img.shields.io/packagist/v/log1x/acf-composer.svg?style=flat-square)
 ![Total Downloads](https://img.shields.io/packagist/dt/log1x/acf-composer.svg?style=flat-square)
 ![Build Status](https://img.shields.io/github/actions/workflow/status/log1x/acf-composer/compatibility.yml?branch=master&style=flat-square)
