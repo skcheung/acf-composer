@@ -3,7 +3,7 @@
 namespace DummyNamespace;
 
 use Log1x\AcfComposer\Block;
-use Roots\Acorn\Application;
+use Themosis\Core\Application;
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
 class DummyClass extends Block

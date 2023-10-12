@@ -5,7 +5,7 @@ namespace Log1x\AcfComposer;
 use ReflectionClass;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
-use Roots\Acorn\Application;
+use Themosis\Core\Application;
 use Symfony\Component\Finder\Finder;
 
 class AcfComposer
@@ -13,7 +13,7 @@ class AcfComposer
     /**
      * The application instance.
      *
-     * @var \Roots\Acorn\Application
+     * @var \Themosis\Core\Application
      */
     protected $app;
 
@@ -53,7 +53,7 @@ class AcfComposer
     /**
      * Create a new Composer instance.
      *
-     * @param  \Roots\Acorn\Application $app
+     * @param  \Themosis\Core\Application $app
      * @return void
      */
     public function __construct(Application $app)

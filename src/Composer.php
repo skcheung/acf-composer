@@ -5,7 +5,7 @@ namespace Log1x\AcfComposer;
 use Log1x\AcfComposer\Contracts\Field as FieldContract;
 use Log1x\AcfComposer\Concerns\InteractsWithPartial;
 use StoutLogic\AcfBuilder\FieldsBuilder;
-use Roots\Acorn\Application;
+use Themosis\Core\Application;
 use Illuminate\Support\Str;
 
 abstract class Composer implements FieldContract
@@ -15,7 +15,7 @@ abstract class Composer implements FieldContract
     /**
      * The application instance.
      *
-     * @var \Roots\Acorn\Application
+     * @var \Themosis\Core\Application
      */
     protected $app;
 
@@ -43,7 +43,7 @@ abstract class Composer implements FieldContract
     /**
      * Create a new Composer instance.
      *
-     * @param  \Roots\Acorn\Application $app
+     * @param  \Themosis\Core\Application $app
      * @return void
      */
     public function __construct(Application $app)

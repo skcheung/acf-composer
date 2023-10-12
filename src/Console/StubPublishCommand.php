@@ -2,7 +2,7 @@
 
 namespace Log1x\AcfComposer\Console;
 
-use Roots\Acorn\Console\Commands\Command;
+use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
 
 class StubPublishCommand extends Command

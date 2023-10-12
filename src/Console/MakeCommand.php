@@ -5,7 +5,7 @@ namespace Log1x\AcfComposer\Console;
 use Exception;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use Roots\Acorn\Console\Commands\GeneratorCommand;
+use Illuminate\Console\GeneratorCommand;
 
 class MakeCommand extends GeneratorCommand
 {

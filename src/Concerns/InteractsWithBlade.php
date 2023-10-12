@@ -4,8 +4,6 @@ namespace Log1x\AcfComposer\Concerns;
 
 use Illuminate\Support\Str;
 
-use function Roots\view;
-
 trait InteractsWithBlade
 {
     /**
