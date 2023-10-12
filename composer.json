@@ -24,13 +24,6 @@
   "suggest": {
     "log1x/modern-acf-options": "Gives ACF option pages a much needed design overhaul."
   },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Log1x\\AcfComposer\\Providers\\AcfComposerServiceProvider"
-      ]
-    }
-  },
   "scripts": {
     "lint": [
       "phpcs --ignore=vendor --extensions=php --standard=PSR12 ."
