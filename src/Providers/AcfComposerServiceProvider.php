@@ -16,7 +16,7 @@ class AcfComposerServiceProvider extends ServiceProvider
     {
         $this->app->singleton('AcfComposer', function () {
             return new AcfComposer($this->app);
-        }
+        });
     }
 
     /**
