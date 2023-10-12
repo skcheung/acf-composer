@@ -169,11 +169,7 @@ class MakeCommand extends GeneratorCommand
     {
         $paths = $this->app['view.finder']->getPaths();
 
-        if (count($paths) === 1) {
-            return head($paths);
-        }
-
-        return $this->choice('Where do you want to create the view(s)?', $paths, head($paths));
+        return head($paths);
     }
 
     /**
