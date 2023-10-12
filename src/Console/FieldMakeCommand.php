@@ -9,7 +9,7 @@ class FieldMakeCommand extends MakeCommand
      *
      * @var string
      */
-    protected $signature = 'acf:field {name* : The name of the field group}
+    protected $signature = 'acf:field {name : The name of the field group}
                                       {--force : Overwrite any existing files}';
 
     /**

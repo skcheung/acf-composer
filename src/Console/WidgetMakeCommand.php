@@ -9,7 +9,7 @@ class WidgetMakeCommand extends MakeCommand
      *
      * @var string
      */
-    protected $signature = 'acf:widget {name* : The name of the widget}
+    protected $signature = 'acf:widget {name : The name of the widget}
                                        {--force : Overwrite any existing files}';
 
     /**

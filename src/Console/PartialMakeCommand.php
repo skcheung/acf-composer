@@ -9,7 +9,7 @@ class PartialMakeCommand extends MakeCommand
      *
      * @var string
      */
-    protected $signature = 'acf:partial {name* : The name of the partial field group}
+    protected $signature = 'acf:partial {name : The name of the partial field group}
                                         {--force : Overwrite any existing files}';
 
     /**
